@@ -26,7 +26,8 @@ for row in sheet_data:
         to_time=six_month_from_today,
         city_from=original_city_code)
     if flights.price < row["lowestPrice"]:
-        notification.send_mail(message=f"Price Alert. Only {flights.price}, {flights.original_city}--{flights.destination_city} to fly from"
+        notification.send_mail(message=f"Price Alert. Only {flights.price}, "
+                                       f"{flights.original_city}--{flights.destination_city} to fly from"
                                        f"{flights.origin_airport} to {flights.destination_airport}, from "
                                        f"{flights.out_date} to {flights.return_date}")
 
